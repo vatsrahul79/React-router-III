@@ -1,16 +1,13 @@
 import React from 'react';
-import ShoppingApplication from './components/ShoppingApplication'
-import Route from './components/Router/Route'
+import ShoppingApplication from './Router/ShoppingApplication'
+import Route from './Router/Route'
 import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <ShoppingApplication>
-          <Route />
-          <h1>this is app</h1>
-        </ShoppingApplication>
+        <ShoppingApplication/>
       </div>
     </BrowserRouter>
   );

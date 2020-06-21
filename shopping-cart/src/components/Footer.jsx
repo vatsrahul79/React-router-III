@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 class Footer extends React.Component{
     constructor(){
@@ -10,7 +10,33 @@ class Footer extends React.Component{
     }
     render(){
         return(
-            <h1>This is footer</h1>
+            <div>
+            <ul style={{display: 'flex'}}>
+                <li>
+                    Sitemap
+                </li>
+                <li>
+                    About us
+                </li>
+                <li>
+
+                </li>
+                <li>
+                </li>
+                <li>
+                </li>
+                <li>
+                </li>
+
+            </ul>
+            <style jsx>
+                {`
+                    ul > li {
+                        margin: 20px
+                    }
+                `}
+            </style>
+        </div>
         )
     }
 }

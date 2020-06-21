@@ -1,15 +1,12 @@
 import React from 'react'
 import { Link, Switch, Route } from 'react-router-dom'
 
-export  default function Navbar (){
+export  default function Navbar (props){
     return (
         <div>
-            <ul>
+            <ul style={{display: 'flex'}}>
                 <li>
                     <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/product">Product</Link>
                 </li>
                 <li>
                     <Link to="/about">About</Link>
@@ -21,13 +18,20 @@ export  default function Navbar (){
                     <Link to="/faq">FAQ</Link>
                 </li>
                 <li>
-                    <Link to="/shoppingcart">Cart</Link>
+                    <Link to="/shoppingcart">Cart [ {props.getCartItemsLength()} ]</Link>
                 </li>
                 <li>
                     <Link to = "/login">Login</Link>
                 </li>
 
             </ul>
+            <style jsx>
+                {`
+                    ul > li {
+                        margin: 20px
+                    }
+                `}
+            </style>
         </div>
 
     )
